@@ -30,7 +30,7 @@ const EventListContent = () => {
                 {events?.length > 0 && events.map((data, id) => {
                     return ((data?.data?.length > 0) && data.data.map((innerData, innerId) => (
                         <div className="col-md-6" key={innerData.slug + innerId}>
-                            <div className="card card-1" style={{ backgroundImage: "url(" + innerData.img + ")" }}>
+                            <div className="card card-1 m-2" style={{ backgroundImage: "url(" + innerData.img + ")" }}>
                                 <h3>{innerData.title}</h3>
                                 <p>{innerData.text}</p>
                             </div>

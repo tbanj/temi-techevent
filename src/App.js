@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
 import { store, persistor } from "./redux/store";
-import { Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Landing from './component/pages/Landing';
 import EventList from './component/pages/EventList';
 import ErrorBoundary from './component/errorBoundary';
