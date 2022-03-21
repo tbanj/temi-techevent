@@ -284,22 +284,19 @@ const LandingContent = () => {
                 updatedData.push({ ...o2, o2Id: `${o2Id}+${o2.title}` })
             })
             return true
-        })
+        });
 
-        console.warn("updatedData", result, updatedData)
-
-        return updatedData
+        return updatedData;
 
     }
     const handleSubmitBtn = async (e) => {
         e.preventDefault();
 
         if (selectedInterest.length < 1) {
-            alert("You are yet to select any interest")
+            alert("You are yet to select any interest");
         }
 
         const result = extractReqData();
-        console.warn(result)
         if (result?.length > 0) {
             await dispatch(selectedEvents(result));
             navigate('/events');

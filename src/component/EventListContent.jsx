@@ -14,8 +14,6 @@ const EventListContent = () => {
         }
     }, [])
 
-
-    console.warn("EventListContent", events)
     return (<Fragment>
 
 
