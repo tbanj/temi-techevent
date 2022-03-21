@@ -1,0 +1,2 @@
+export const ALL_EVENTS = 'ALL_EVENTS';
+export const SELECTED_EVENTS = 'SELECTED_EVENTS';

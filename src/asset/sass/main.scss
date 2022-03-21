@@ -1,0 +1,14 @@
+
+
+// import abstracts
+@import "./abstracts/variable";
+
+//  import components
+@import "./components/header";
+@import "./components/eventListContent";
+
+// import pages
+@import "./pages/landing";
+@import "./pages/test";
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";

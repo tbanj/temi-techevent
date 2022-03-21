@@ -1,0 +1,89 @@
+
+
+
+.sub-main{
+    width: 30%;
+    margin:22px;
+    float: left;
+  }
+  
+  .button-two{
+    text-align: center;
+    cursor: pointer;
+    font-size:24px;
+  //   margin: 0 0 0 100px;
+  }
+  /*Button Two*/
+  .button-two {
+    border-radius: 4px;
+    background-color: $first-color;
+    border: none;
+  //   padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+  }
+  
+  
+  .button-two span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button-two span:before {
+    content: '«';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0px;
+    transition: 0.5s;
+  }
+  
+  .button-two:hover span {
+    padding-left: 25px;
+  }
+  
+  .button-two:hover span:before {
+    opacity: 1;
+    left: 0;
+  }
+
+
+.card{
+    // border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card h3{
+  font-weight: 600;
+}
+
+.card img{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  max-height: 120px;
+}
+
+.card-1{
+  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+
+@media(max-width: 990px){
+  .card{
+    margin: 20px;
+  }
+} 

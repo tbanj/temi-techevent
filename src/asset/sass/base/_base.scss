@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*, :root {
+  font-family: "Google Sans"!important;
+}
+:root{
+  font-size: 16px ;
+}
+.fa, .far, .fas {
+  font-family: "Font Awesome 5 Free" !important;
+}
+html {
+  body {
+    font-family:"Google Sans","Lato", sans-serif;
+    background-color: $background-lightBlue;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:576px){
+  :root{
+    font-size: 14px ;
+  }
+}
