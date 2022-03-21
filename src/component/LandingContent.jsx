@@ -18,7 +18,7 @@ const eventBtnList = [{
     }]
 },
 {
-    id: 2, title: "Mobile Development",
+    id: 2, title: "Mobile Development", slug: "mobile-evelopment",
     data: [{
         id: 1, img: "https://source.unsplash.com/random", title: "Mobile Development-1",
         eventType: "face-to-face",
@@ -33,12 +33,12 @@ const eventBtnList = [{
 {
     id: 3, title: "Robotics", slug: "robotics",
     data: [{
-        id: 1, img: "https://source.unsplash.com/random", title: "Mobile Development-1",
+        id: 1, img: "https://source.unsplash.com/random", title: "Robotics-1",
         eventType: "face-to-face",
         text: "This is a media card. You can use this section to describe the content."
     },
     {
-        id: 2, img: "https://source.unsplash.com/random", title: "Mobile Development-2",
+        id: 2, img: "https://source.unsplash.com/random", title: "Robotics-2",
         eventType: "remote",
         text: "This is a media card. You can use this section to describe the content."
     }]
