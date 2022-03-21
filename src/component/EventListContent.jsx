@@ -26,18 +26,13 @@ const EventListContent = () => {
         </div>
         <div className="container my-5">
 
-
-            <div className='row d-flex justify-content-around'>
+            <div className='row'>
                 {(events?.length > 0) && events.map((data, id) => {
-                    return (<div className='col-md-6' key={data.slug + id}>
-                        {(data?.data?.length > 0) && data.data.map((innerData, innerId) => (
-                            <div className="" key={innerData.eventType + innerId}>
-                                <div className="card card-1 m-2" style={{ backgroundImage: "url(" + innerData.img + ")" }}>
-                                    <h3>{innerData.title}</h3>
-                                    <p>{innerData.text}</p>
-                                </div>
-                            </div>
-                        ))}
+                    return (<div className='col-md-6' key={data.o2Id} id={data.o2Id}>
+                        <div className="card card-1 m-2" style={{ backgroundImage: "url(" + data.img + ")" }}>
+                            <h3>{data.title}</h3>
+                            <p>{data.text}</p>
+                        </div>
                     </div>)
                 })}
             </div>

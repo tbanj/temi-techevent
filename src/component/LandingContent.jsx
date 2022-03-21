@@ -105,9 +105,6 @@ const LandingContent = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const saveStoreLists = async (data) => {
-        await dispatch(storeEvents(data));
-    }
 
 
 
@@ -123,13 +120,6 @@ const LandingContent = () => {
          } */
     };
 
-    // when interest button is clicked
-    useEffect(() => {
-
-        saveStoreLists([...eventBtnList]);
-        return () => {
-        }
-    }, [])
 
 
     /**
@@ -287,13 +277,36 @@ const LandingContent = () => {
     }
 
 
+    const extractReqData = () => {
+        let updatedData = [];
+        const result = selectedInterest.map((content, id) => {
+            content.data.map((o2, o2Id) => {
+                updatedData.push({ ...o2, o2Id: `${o2Id}+${o2.title}` })
+            })
+            return true
+        })
+
+        console.warn("updatedData", result, updatedData)
+
+        return updatedData
+
+    }
     const handleSubmitBtn = async (e) => {
         e.preventDefault();
+
         if (selectedInterest.length < 1) {
             alert("You are yet to select any interest")
         }
-        await dispatch(selectedEvents(selectedInterest));
-        navigate('/events');
+
+        const result = extractReqData();
+        console.warn(result)
+        if (result?.length > 0) {
+            await dispatch(selectedEvents(result));
+            navigate('/events');
+        }
+
+
+
     }
 
 
